@@ -84,14 +84,6 @@
 	box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
-	outline: 2px solid red !important;
-	outline-offset: -2px;
-	/* Para que el borde se vea por dentro y no sume más ancho */
-}
-
 html {
 	scroll-behavior: smooth;
 }
