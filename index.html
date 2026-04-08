@@ -11,7 +11,8 @@
 		content="Ebo Estilistas: Expertos en coloración, tratamientos capilares y estilismo para bodas en Córdoba. Asesoramiento personalizado con valoración 4.9/5. ¡Reserva tu cita hoy mismo!">
 	<meta name="keywords"
 		content="peluquería Córdoba, estilistas Córdoba, peinados bodas Córdoba, coloración natural, tratamientos capilares, uñas de gel Córdoba">
-	<link rel="canonical" href="https://www.eboestilistas.com/">
+	<link rel="canonical" href="https://eboestilistas.vercel.app/">
+	<link rel="icon" type="image/jpeg" href="img/favicon.jpeg">
 
 	<!-- GOOGLE FONTS -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,15 +21,18 @@
 		href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&display=swap"
 		rel="stylesheet">
 
+	<!-- PRECARGA DE IMAGEN CRÍTICA (Mejora LCP) -->
+	<link rel="preload" as="image" href="img/img-hero.webp" fetchpriority="high">
+
 	<!-- LD+JSON: LOCAL BUSINESS (SEO Avanzado) -->
 	<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
 		"@type": "HairSalon",
 		"name": "Ebo Estilistas",
-		"image": "https://www.eboestilistas.com/img/logo-ebo.webp",
-		"@id": "https://www.eboestilistas.com/",
-		"url": "https://www.eboestilistas.com/",
+		"image": "https://eboestilistas.vercel.app/img/logo-ebo.webp",
+		"@id": "https://eboestilistas.vercel.app/",
+		"url": "https://eboestilistas.vercel.app/",
 		"telephone": "+34957496825",
 		"address": {
 			"@type": "PostalAddress",
@@ -75,11 +79,12 @@
 		<div class="barra-superior">
 			<div class="contenedor flex-superior">
 				<div class="info-item sucursal">
-					<a href="https://maps.app.goo.gl/7991286721822896" class="info-texto">C. Cecilio Valverde Mazuelas,
+					<a href="https://maps.app.goo.gl/7991286721822896" class="info-texto">📍 C. Cecilio Valverde
+						Mazuelas,
 						N.º 1, Córdoba</a>
 				</div>
 				<div class="info-item contacto">
-					<a href="tel:+34957496825" class="info-enlace">957 49 68 25</a>
+					<a href="tel:+34957496825" class="info-enlace">📞 957 49 68 25</a>
 				</div>
 			</div>
 		</div>
@@ -119,7 +124,7 @@
 		<section class="hero" id="hero">
 			<div class="hero-contenedor">
 				<div class="hero-cuerpo">
-					<h1 class="hero-titulo">Redescubre tu esencia con el cuidado que tu cabello merece</h1>
+					<h1 class="hero-titulo">Estilistas en Córdoba: Redescubre tu esencia con el cuidado que mereces</h1>
 					<p class="hero-leed">En Ebo Estilistas transformamos tu imagen mediante un asesoramiento
 						personalizado y técnicas de alta peluquería en el corazón de Córdoba.</p>
 					<div class="hero-botones">
@@ -245,7 +250,8 @@
 					<!-- Servicio 1: Corte -->
 					<article class="servicio-tarjeta">
 						<div class="servicio-visual">
-							<img src="img/img-tarjeta-corte-estilismo.webp" alt="Corte y Estilismo en Ebo Estilistas"
+							<img src="img/img-tarjeta-corte-estilismo.webp"
+								alt="Asesoramiento y corte de pelo profesional en Ebo Estilistas Córdoba"
 								loading="lazy">
 						</div>
 						<div class="servicio-overlay"></div>
@@ -255,11 +261,12 @@
 								cabello.</p>
 						</div>
 					</article>
-
 					<!-- Servicio 2: Coloración -->
 					<article class="servicio-tarjeta">
 						<div class="servicio-visual">
-							<img src="img/img-coloracion-avanzada.webp" alt="Coloración Avanzada" loading="lazy">
+							<img src="img/img-coloracion-avanzada.webp"
+								alt="Mechas Balayage y coloración avanzada realizada por peluqueros expertos"
+								loading="lazy">
 						</div>
 						<div class="servicio-overlay"></div>
 						<div class="servicio-contenido-box">
@@ -269,11 +276,11 @@
 								fibra capilar.</p>
 						</div>
 					</article>
-
 					<!-- Servicio 3: Bodas -->
 					<article class="servicio-tarjeta">
 						<div class="servicio-visual">
-							<img src="img/img-boda.webp" alt="Especialistas en Bodas" loading="lazy">
+							<img src="img/img-boda.webp" alt="Peinados para novias de estilo boho y elegante en Córdoba"
+								loading="lazy">
 						</div>
 						<div class="servicio-overlay"></div>
 						<div class="servicio-contenido-box">
@@ -282,11 +289,11 @@
 								eventos inolvidables.</p>
 						</div>
 					</article>
-
 					<!-- Servicio 4: Tratamientos -->
 					<article class="servicio-tarjeta">
 						<div class="servicio-visual">
-							<img src="img/img-tratamientos-capilares.webp" alt="Tratamientos Capilares" loading="lazy">
+							<img src="img/img-tratamientos-capilares.webp"
+								alt="Tratamiento de hidratación y reparación capilar profunda" loading="lazy">
 						</div>
 						<div class="servicio-overlay"></div>
 						<div class="servicio-contenido-box">
@@ -295,11 +302,11 @@
 								intensivos.</p>
 						</div>
 					</article>
-
 					<!-- Servicio 5: Uñas -->
 					<article class="servicio-tarjeta">
 						<div class="servicio-visual">
-							<img src="img/img-uñas.webp" alt="Uñas de Gel y Nail Art" loading="lazy">
+							<img src="img/img-uñas.webp"
+								alt="Manicura de gel y decoración de uñas nail art personalizada" loading="lazy">
 						</div>
 						<div class="servicio-overlay"></div>
 						<div class="servicio-contenido-box">
@@ -308,11 +315,12 @@
 							</p>
 						</div>
 					</article>
-
 					<!-- Servicio 6: Maquillaje -->
 					<article class="servicio-tarjeta">
 						<div class="servicio-visual">
-							<img src="img/img-maquillaje.webp" alt="Maquillaje Profesional" loading="lazy">
+							<img src="img/img-maquillaje.webp"
+								alt="Servicio de maquillaje profesional para eventos y fiestas en Córdoba"
+								loading="lazy">
 						</div>
 						<div class="servicio-overlay"></div>
 						<div class="servicio-contenido-box">
@@ -404,9 +412,9 @@
 				<div class="footer-col-legal">
 					<h4 class="footer-h4">Legal</h4>
 					<ul class="footer-ul">
-						<li><a href="#">Aviso Legal</a></li>
-						<li><a href="#">Privacidad</a></li>
-						<li><a href="#">Cookies</a></li>
+						<li><a href="aviso-legal.html">Aviso Legal</a></li>
+						<li><a href="privacidad.html">Privacidad</a></li>
+						<li><a href="cookies.html">Cookies</a></li>
 					</ul>
 				</div>
 			</div>

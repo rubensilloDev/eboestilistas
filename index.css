@@ -78,7 +78,6 @@
 
 /* 2. RESET & BASE */
 * {
-	outline: 1px solid red !important;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -250,26 +249,21 @@ img {
 /* Botón CTA en Menú */
 .nav-cta-boton {
 	background-color: var(--beige-arena);
-	/* visual */
 	color: var(--negro-profundo);
-	/* visual */
-	padding: 8px 18px;
-	/* caja - reducido */
-	font-weight: 600;
-	/* tipografia */
+	padding: 10px 22px;
+	font-weight: 700;
 	font-size: var(--fs-pequena);
-	/* tipografia */
 	text-transform: uppercase;
-	/* tipografia */
-	border-radius: 2px;
-	/* visual */
-	transition: 0.3s all ease;
-	/* visual */
+	letter-spacing: 0.5px;
+	border-radius: 4px;
+	transition: all 0.3s ease;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .nav-cta-boton:hover {
 	background-color: var(--beige-dorado);
-	border-radius: 5px;
+	transform: translateY(-2px);
+	box-shadow: 0 5px 15px rgba(210, 180, 140, 0.3);
 }
 
 /* 4. HERO SECTION */
@@ -326,32 +320,36 @@ img {
 /* Botones Hero */
 .boton-cta {
 	position: relative;
+	display: inline-block;
 	overflow: hidden;
 	background-color: var(--beige-arena);
 	color: var(--negro-profundo);
-	padding: 18px 35px;
+	padding: 20px 42px;
 	font-size: var(--fs-nav);
 	text-transform: uppercase;
-	font-weight: 700;
-	letter-spacing: 1px;
-	transition: var(--transicion);
+	font-weight: 800;
+	letter-spacing: 1.5px;
+	border-radius: 4px;
+	transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	border: none;
+	cursor: pointer;
 }
 
-/* reflejo para hacer la animación */
+/* reflejo para hacer la animación (más sutil) */
 .boton-cta::after {
 	content: '';
 	position: absolute;
 	top: 0;
 	left: -100%;
-	/* Comienzo */
-	width: 60%;
+	width: 50%;
 	height: 100%;
 	background: linear-gradient(120deg,
 			transparent,
-			rgba(255, 255, 255, 0.3),
+			rgba(255, 255, 255, 0.4),
 			transparent);
-	transform: skewX(-30deg);
-	animation: reflejo 3s infinite;
+	transform: skewX(-25deg);
+	animation: reflejo 4s infinite;
 }
 
 @keyframes reflejo {
@@ -359,38 +357,44 @@ img {
 		left: -150%;
 	}
 
-	50% {
-		left: 135%;
-	}
-
-	/* Pasa de largo muy rápido */
-	100% {
+	30% {
 		left: 150%;
 	}
 
-	/* Se queda un rato quieto antes de empezar*/
+	100% {
+		left: 150%;
+	}
 }
 
 .boton-cta:hover {
 	background-color: var(--beige-dorado);
-	transform: translateY(-5px);
+	transform: translateY(-4px);
+	box-shadow: 0 12px 30px rgba(210, 180, 140, 0.3);
+}
+
+.boton-cta:active {
+	transform: translateY(-2px);
 }
 
 .boton-link {
-	border: 2px solid var(--beige-arena);
-	border-radius: 10px;
+	position: relative;
+	display: inline-block;
+	border: 1.5px solid rgba(255, 255, 255, 0.4);
 	color: var(--blanco-puro);
-	padding: 18px 35px;
+	padding: 20px 42px;
 	font-size: var(--fs-nav);
 	text-transform: uppercase;
-	font-weight: 600;
-	letter-spacing: 1px;
-	position: relative;
-	transition: var(--transicion);
+	font-weight: 700;
+	letter-spacing: 1.5px;
+	border-radius: 4px;
+	transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .boton-link:hover {
-	transform: translateY(-5px);
+	background-color: rgba(255, 255, 255, 0.05);
+	border-color: var(--beige-arena);
+	color: var(--beige-arena);
+	transform: translateY(-4px);
 }
 
 
@@ -837,38 +841,30 @@ img {
 
 /* 10. SECCIÓN 6: CTA FINAL */
 .seccion-cta-final {
-	padding: 120px 0;
-	/* caja */
-	/* visual */
+	padding: 100px 0;
+	background-color: var(--negro-profundo);
 	position: relative;
-	/* posicion */
+	border-top: 1px solid rgba(210, 180, 140, 0.2);
 }
 
 .cta-caja {
-	background-color: var(--negro-profundo);
-	max-width: 900px;
-	/* caja */
+	max-width: 1000px;
 	margin: 0 auto;
-	/* caja */
-	padding: 40px 20px;
-	/* caja */
+	padding: 80px 40px;
 	text-align: center;
-	/* tipografia */
-	border: 3px solid var(--beige-dorado);
-	/* visual */
+	border: 1px solid rgba(210, 180, 140, 0.3);
+	background: radial-gradient(circle at center, #1a1a1a 0%, var(--negro-profundo) 100%);
+	border-radius: 8px;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .cta-titulo-grande {
-	font-family: var(--fuente-titulos);
-	/* tipografia */
-	font-size: clamp(2rem, 5vw, 3.5rem);
-	/* tipografia (fluida) */
-	color: var(--blanco-puro);
-	/* visual */
-	line-height: 1.2;
-	/* tipografia */
-	margin-bottom: var(--space-3);
-	/* caja */
+	font-family: var(--fuente-h1);
+	font-size: clamp(2.2rem, 6vw, 4rem);
+	color: var(--beige-arena);
+	line-height: 1.1;
+	margin-bottom: var(--space-4);
+	letter-spacing: -1px;
 }
 
 .cta-p-sub {
@@ -893,58 +889,37 @@ img {
 
 .boton-cta-v2 {
 	display: inline-block;
-	/* caja */
-	padding: 1.2rem 3rem;
-	/* caja */
-	margin-top: 2%;
+	padding: 20px 42px;
 	background-color: var(--beige-arena);
-	/* visual */
 	color: var(--negro-profundo);
-	/* visual */
-	font-weight: 700;
-	/* tipografia */
+	font-weight: 800;
+	margin-top: 1rem;
 	text-transform: uppercase;
-	/* tipografia */
-	letter-spacing: 2px;
-	/* tipografia */
-	text-decoration: none;
-	/* visual */
-	transition: var(--transicion);
-	/* visual */
-	position: relative;
-	/* posicion */
-	overflow: hidden;
-	/* caja */
+	letter-spacing: 1.5px;
+	border-radius: 4px;
+	transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .boton-cta-v2:hover {
 	background-color: var(--beige-dorado);
-	/* visual */
-	transform: translateY(-3px);
-	/* posicion */
+	transform: translateY(-4px);
+	box-shadow: 0 12px 30px rgba(210, 180, 140, 0.3);
 }
 
 .cta-valoracion {
 	font-size: var(--fs-pequena);
-	/* tipografia */
-	color: var(--beige-dorado);
-	/* visual */
-	letter-spacing: 1px;
-	/* tipografia */
+	color: var(--beige-fantasma);
+	opacity: 0.8;
 	margin-top: var(--space-4);
-	/* caja */
 }
 
 /* 11. FOOTER (PIE DE PÁGINA) */
 .pie-pagina {
-	padding: 100px 0 40px;
-	/* caja */
+	padding: 80px 0 40px;
 	background-color: var(--negro-profundo);
-	/* visual */
 	color: var(--blanco-puro);
-	/* visual */
-	border-top: 1px solid var(--beige-fantasma);
-	/* visual */
+	border-top: 1px solid rgba(210, 180, 140, 0.1);
 }
 
 .footer-grid {

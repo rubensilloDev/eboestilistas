@@ -1,0 +1,6 @@
+# robots.txt para eboestilistas.es
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://eboestilistas.vercel.app/sitemap.xml
