@@ -1146,7 +1146,7 @@ img {
 	.nav-overlay {
 		position: absolute;
 		/* Sacamos el menú del flujo para que no empuje al logo */
-		top: 65px;
+		top: 70px;
 		/* Ajusta esto a la altura de tu cabecera */
 		right: 0;
 		width: 100%;
@@ -1158,7 +1158,6 @@ img {
 		visibility: hidden;
 		transform: translateY(-20px);
 		transition: all 0.4s ease;
-		pointer-events: none;
 	}
 
 
@@ -1168,8 +1167,11 @@ img {
 		transform: translateY(0);
 		background-color: var(--negro-profundo);
 		display: flex;
+		position: absolute;
+		top: 75px;
+		width: 100%;
+		right: 0;
 		flex-direction: column;
-		pointer-events: all;
 	}
 
 	.nav-menu.active {
