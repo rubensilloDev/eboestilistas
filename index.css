@@ -78,9 +78,18 @@
 
 /* 2. RESET & BASE */
 * {
+	outline: 1px solid red !important;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	outline: 2px solid red !important;
+	outline-offset: -2px;
+	/* Para que el borde se vea por dentro y no sume más ancho */
 }
 
 html {
@@ -1272,4 +1281,10 @@ img {
 		padding-left: 0;
 		/* caja */
 	}
+}
+
+.cabecera-principal {
+	width: 100%;
+	max-width: 100%;
+	overflow-x: clip;
 }
