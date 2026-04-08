@@ -5,23 +5,36 @@ const contenedorMenu = document.querySelector('.nav-overlay');
 const navMenu = document.querySelector('.nav-menu');
 const enlacesMenu = document.querySelectorAll('.nav-link');
 
-btnHamburguesa.addEventListener('click', () => {
+// Función única para cerrar el menú
+const cerrarMenu = () => {
+    btnHamburguesa.classList.remove('active');
+    contenedorMenu.classList.remove('active');
+    navMenu.classList.remove('active');
+    document.body.style.overflow = ''; // Rehabilitar scroll si se había bloqueado
+};
+
+btnHamburguesa.addEventListener('click', (e) => {
+    e.stopPropagation();
     btnHamburguesa.classList.toggle('active');
     contenedorMenu.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    
+    // Bloquear scroll cuando el menú está abierto
     if (contenedorMenu.classList.contains('active')) {
-        navMenu.classList.add('active')
+        document.body.style.overflow = 'hidden';
     } else {
-        navMenu.classList.remove('active')
+        document.body.style.overflow = '';
     }
 });
 
-
-// para que cuando se toque en un enlace del menu se cierre el menu del movil
-
+// Cerrar al hacer clic en un link
 enlacesMenu.forEach(enlace => {
-    enlace.addEventListener('click', () => {
-        btnHamburguesa.classList.remove('active')
-        contenedorMenu.classList.remove('active')
-        navMenu.classList.remove('active')
-    })
-})
+    enlace.addEventListener('click', cerrarMenu);
+});
+
+// Cerrar al hacer clic fuera del contenido (en el overlay)
+contenedorMenu.addEventListener('click', (e) => {
+    if (e.target === contenedorMenu) {
+        cerrarMenu();
+    }
+});
