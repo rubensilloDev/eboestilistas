@@ -1080,12 +1080,14 @@ img {
 
 	/* Botón hamburguesa (visible en móvil) */
 	.nav-toggle {
+		border: 2px solid var(--beige-arena);
+		border-radius: 50%;
+		padding: 10px 10px 5px 10px;
 		opacity: 1;
 		z-index: 1001;
 		/* Siempre por encima del overlay */
 		display: block;
 		background: none;
-		border: none;
 		cursor: pointer;
 	}
 
